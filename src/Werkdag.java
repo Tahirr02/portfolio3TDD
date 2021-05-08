@@ -6,14 +6,24 @@ public class Werkdag {
 
 
     public void setUren(int uren){
+        if(uren > 8){
+            uren = 8;
+        }
 
         this.uren = uren;
     }
 
     public double getUren(){
-        return -1;
+        return this.uren;
     }
     public void setMinuten(int minuten){
+
+        if(minuten < 30 ){
+            minuten = 0;
+        }
+        else if(minuten > 30 && minuten <= 59 ){
+            minuten = 30;
+        }
 
 
 
@@ -23,7 +33,7 @@ public class Werkdag {
 
     public int getMinuten(){
 
-        return -1;
+        return this.minuten;
     }
 
 

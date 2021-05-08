@@ -5,8 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class MaandsalarisTest {
 
     @Test
-    void getJaartal() {
-        Maandsalaris maandsalaris = new Maandsalaris(330,13);
+    void TestIsDatumCorrect() {
+        Maandsalaris maandsalaris = new Maandsalaris();
+        maandsalaris.setMaand(13);
+        maandsalaris.setJaartal(330);
         assertFalse(maandsalaris.isDatumCorrect());
     }
 }
